@@ -60,20 +60,20 @@ const Dashboard = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setActionLoading(true);
-    try {
-      await api.createLead(formData);
-      setOn(false);
-      setFormData({ name: '', email: '', phone: '' });
-      fetchData();
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setActionLoading(false);
-    }
-  };
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setActionLoading(true);
+  try {
+    await api.createLead(formData);
+    setOn(false);
+    setFormData({ name: '', email: '', phone: '' });
+    fetchData();
+  } catch (error) {
+    alert(error.message || "Something went wrong. Please try again.");
+  } finally {
+    setActionLoading(false);
+  }
+};
 
   const filteredLeads = leads.filter(lead =>
     lead.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||

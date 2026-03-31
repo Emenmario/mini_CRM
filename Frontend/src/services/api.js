@@ -20,15 +20,21 @@ export const api = {
     return res.json();
   },
 
-  async createLead(formData) {
-    const res = await fetch(`${BASE_URL}/leads`, {
-      method: 'POST',
-      headers: getHeaders(),
-      body: JSON.stringify(formData)
-    });
-    return res.json();
-  },
+ async createLead(formData) {
+  const res = await fetch(`${BASE_URL}/leads`, {
+    method: 'POST',
+    headers: getHeaders(),
+    body: JSON.stringify(formData)
+  });
 
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw data; 
+  }
+
+  return data;
+},
   async updateLeadStatus(id, status) {
     const res = await fetch(`${BASE_URL}/leads/${id}`, {
       method: 'PATCH',
