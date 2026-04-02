@@ -13,7 +13,6 @@ export const api = {
     return res.json();
   },
 
-  // Leads CRUD
   async getLeads() {
     const res = await fetch(`${BASE_URL}/leads`, { headers: getHeaders() });
     if (!res.ok) throw new Error('Failed to fetch leads');

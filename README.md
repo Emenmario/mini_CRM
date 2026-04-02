@@ -1,16 +1,28 @@
-# React + Vite
+Lead CRM
+A minimalist PERN stack application for lead tracking, staff management, and business analytics.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tech Stack
+Frontend: React + Vite & Tailwind CSS
 
-Currently, two official plugins are available:
+Backend: Node.js + Express
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Database: PostgreSQL
 
-## React Compiler
+Core Features
+Lead CRM: Full CRUD functionality for tracking sales pipelines.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Management: Tools for staff oversight and gym membership tracking.
 
-## Expanding the ESLint configuration
+Analytics: Dedicated dashboard featuring statistical data and conversion metrics.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+UI/UX: High-contrast, minimalist dark mode interface.
+
+Setup
+Install: npm install in both root and /client.
+
+Environment: Configure DATABASE_URL and JWT_SECRET in a .env file.
+
+Run Backend: npm run dev
+
+Run Frontend: cd client && npm run dev
+thanks!
